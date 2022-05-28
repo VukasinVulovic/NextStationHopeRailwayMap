@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.map {
+    width: auto;
+    height: 100vh;
+    position: relative;
+    transition: 0.5s;
+}
+
+.map .image {
+    width: auto;
+    height: 100%;
+}
+
+@keyframes bob {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(0, -5%);
+    }
+}
+
+.map .pin {
+    z-index: 1;
+    animation: bob 0.7s alternate infinite;
+    transition: 0.15s;
+}
+
+.map .pin, .map .station-pin {
+    position: absolute;
+    width: 10%;
+    left: 0;
+    top: 0;
+}
+
+.map .station-pin {
+    filter: hue-rotate(205deg);
+    opacity: 0.7;
+    width: 8%;
+}
+
+.info {
+    width: auto;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    margin-left: 2%;
+}
+
+.info .image {
+    width: auto;
+    height: 100%;
+}
